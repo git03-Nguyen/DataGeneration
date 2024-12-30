@@ -29,7 +29,7 @@ public static class FileExportExtensions
             database.Users.WriteToCsv(AccountTableName, folder);
             database.Brands.WriteToCsv(BrandTableName, folder);
             database.Categories.WriteToCsv(CategoryTableName, folder);
-            database.Products.WriteToCsv(ProductImageTableName, folder);
+            database.ProductImages.WriteToCsv(ProductImageTableName, folder);
             database.Products.WriteToCsv(ProductTableName, folder);
             database.Invoices.WriteToCsv(InvoiceTableName, folder);
         }
@@ -39,7 +39,7 @@ public static class FileExportExtensions
             database.Users.WriteToSql(AccountTableName, folder);
             database.Brands.WriteToSql(BrandTableName, folder);
             database.Categories.WriteToSql(CategoryTableName, folder);
-            database.Products.WriteToSql(ProductImageTableName, folder);
+            database.ProductImages.WriteToSql(ProductImageTableName, folder);
             database.Products.WriteToSql(ProductTableName, folder);
             database.Invoices.WriteToSql(InvoiceTableName, folder);
         }
@@ -49,7 +49,7 @@ public static class FileExportExtensions
             database.Users.WriteToJson(AccountTableName, folder);
             database.Brands.WriteToJson(BrandTableName, folder);
             database.Categories.WriteToJson(CategoryTableName, folder);
-            database.Products.WriteToJson(ProductImageTableName, folder);
+            database.ProductImages.WriteToJson(ProductImageTableName, folder);
             database.Products.WriteToJson(ProductTableName, folder);
             database.Invoices.WriteToJson(InvoiceTableName, folder);
         }
