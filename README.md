@@ -27,7 +27,7 @@ dotnet run --users <number> --brands <number> --categories <number> --products <
 ### Example
 
 ```sh
-dotnet run --users 100 --brands 20 --categories 50 --products 200 --invoices 50 --export csv,sql
+dotnet run --users 50 --brands 5 --categories 50 --products 1000 --invoices 1000 --export sql
 ```
 
 The output files will be saved in the application's `output/` directory.
