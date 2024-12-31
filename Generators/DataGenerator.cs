@@ -26,7 +26,7 @@ public static class DataGenerator
             // .RuleFor(u => u.Password, f => f.Internet.Password())
             .RuleFor(u => u.Role, f => f.PickRandom("admin", "user"))
             .RuleFor(u => u.Enabled, f => f.Random.Int(0, 4) > 0)
-            .RuleFor(u => u.FailedLoginAttempts, f => f.Random.Int(0, 3))
+            .RuleFor(u => u.FailedLoginAttempts, f => f.Random.Int(0, 4))
             .RuleFor(u => u.CreatedAt, f => f.Date.Past())
             .RuleFor(u => u.UpdatedAt, f => f.Date.Past());
         var users = userFaker.Generate(request.NUsers);
