@@ -5,9 +5,9 @@ using CsvHelper.Configuration;
 using MDataGeneration.Helpers;
 using MDataGeneration.Models.Dtos;
 
-namespace MDataGeneration.Extensions;
+namespace MDataGeneration.Handlers;
 
-public static class FileExportExtensions
+public static class FileExportHandler
 {
     private const string AccountTableName = "users";
     private const string BrandTableName = "brands";

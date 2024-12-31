@@ -1,15 +1,13 @@
-using System;
-using System.Linq;
 using Bogus;
 using MDataGeneration.Helpers;
 using MDataGeneration.Models;
 using MDataGeneration.Models.Dtos;
 
-namespace MDataGeneration.Generators;
+namespace MDataGeneration.Handlers;
 
-public static class DataGenerator
+public static class DataGenerationHandler
 {
-    public static Database GenerateDatabase(GenerationRequest request)
+    public static Database GenerateDatabase(this GenerationRequest request)
     {
         // Generate Accounts
         var userFaker = new Faker<User>("en")

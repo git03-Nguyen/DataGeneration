@@ -1,6 +1,5 @@
 ﻿using System.CommandLine;
-using MDataGeneration.Extensions;
-using MDataGeneration.Generators;
+using MDataGeneration.Handlers;
 using MDataGeneration.Models.Dtos;
 
 namespace MDataGeneration;
@@ -63,7 +62,7 @@ class Program
                 }
             }
 
-            DataGenerator.GenerateDatabase(request).ExportToFile(formats);
+            request.GenerateDatabase().ExportToFile(formats);
             Console.WriteLine("Data generated successfully");
         }, usersOption, brandsOption, categoriesOption, productsOption, invoicesOption, exportOption);
 
