@@ -78,8 +78,8 @@ public static class FileExportHandler
             valuesList.Add($"({string.Join(", ", FileExportHelpers.GetPropertyValues(item))})");
         }
 
-        sb.AppendLine($"INSERT INTO `{tableName}` ({string.Join(", ", FileExportHelpers.GetPropertyNames(data.First()))})");
-        sb.AppendLine($"VALUES {string.Join(", ", valuesList)} ON DUPLICATE KEY UPDATE id=id;");
+        sb.AppendLine($"INSERT IGNORE INTO `{tableName}` ({string.Join(", ", FileExportHelpers.GetPropertyNames(data.First()))}) VALUES");
+        sb.AppendLine(string.Join(",\n", valuesList) + ";");
 
         File.WriteAllText(path, sb.ToString());
     }
